@@ -15,11 +15,7 @@
 */
 
 class Employee {
-  constructor(public name: string, private department: string, protected salary: number) {
-    this.name = name;
-    this.department = department;
-    this.salary = salary;
-  }
+  constructor(public name: string, private department: string, protected salary: number) { };
 
   getEmployeeDetails() {
     return `Name: ${this.name}, Department: ${this.department}, Salary: ${this.salary}`;
@@ -28,7 +24,7 @@ class Employee {
 
 class Manager extends Employee {
   constructor(name: string, department: string, salary: number) {
-    super(name, department, salary + 10000); // Не впевнений що так можна але якщо роблю за доп методу, то спочатку його треба викликати і передати в нього те що треба додати до salary, а це першим прийшло на думку )))
+    super(name, department, salary + 10000);
   }
 };
 

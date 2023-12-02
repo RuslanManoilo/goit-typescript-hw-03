@@ -20,7 +20,7 @@ abstract class House {
 
     constructor(public key: Key) { }
 
-    public comeIn(tenant: Person) {
+    public comeIn(tenant: Person): void {
         if (this.door) {
             this.tenants.push(tenant);
         };
@@ -30,7 +30,7 @@ abstract class House {
 };
 
 class MyHouse extends House {
-     openDoor(info) {
+     openDoor(info): void {
         if (info.getSignature() === key.getSignature()) {
             this.door = true;
          };
